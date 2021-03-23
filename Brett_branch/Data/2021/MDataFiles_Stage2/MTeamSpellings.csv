@@ -45,6 +45,7 @@ arizona state,1113
 arizona-st,1113
 arizona-state,1113
 ark little rock,1114
+arkansas pine bluff,1115
 ark pine bluff,1115
 ark-pine-bluff,1115
 ark.-pine bluff,1115
@@ -77,6 +78,7 @@ ball-state,1123
 baylor,1124
 bellarmine,1468
 belmont,1125
+bethune cookman,1126
 bethune-cookman,1126
 binghamton,1127
 birmingham so,1128
@@ -118,7 +120,7 @@ cal poly slo,1142
 cal riverside,1415
 cal st. fullerton,1168
 cal st. northridge,1169
-cal state bakersfield,1167
+cal st. bakersfield,1167
 cal state fullerton,1168
 cal state northridge,1169
 cal state-fullerton,1168
@@ -228,6 +230,7 @@ depaul,1177
 detroit,1178
 detroit mercy,1178
 detroit-mercy,1178
+dixie st.,1469
 dixie st,1469
 drake,1179
 drexel,1180
@@ -360,6 +363,7 @@ illinois,1228
 illinois st,1229
 illinois st.,1229
 illinois state,1229
+illinois chicago,1227
 illinois-chicago,1227
 illinois-st,1229
 illinois-state,1229
@@ -415,6 +419,7 @@ kent-st,1245
 kent-state,1245
 kentucky,1246
 la salle,1247
+louisiana monroe,1419
 la-monroe,1419
 la-salle,1247
 la.-lafayette,1418
@@ -428,6 +433,7 @@ liberty,1251
 lipscomb,1252
 little rock,1114
 little-rock,1114
+liu,1254
 liu brooklyn,1254
 liu-brooklyn,1254
 long beach st,1253
@@ -470,6 +476,7 @@ marist,1265
 marquette,1266
 marshall,1267
 maryland,1268
+maryland eastern shore,1271
 maryland - e. shore,1271
 maryland-baltimore county,1420
 maryland-baltimore-county,1420
@@ -518,6 +525,7 @@ middle-tennessee,1292
 middle-tennessee-state,1292
 milwaukee,1454
 minnesota,1278
+mississippi valley st.,1290
 miss valley st.,1290
 mississippi,1279
 mississippi st,1280
@@ -858,6 +866,7 @@ south-dakota-st,1355
 south-dakota-state,1355
 south-fla,1378
 south-florida,1378
+southeast missouri st.,1369
 southeast missouri state,1369
 southeast mo. st.,1369
 southeast-missouri-state,1369
@@ -892,7 +901,9 @@ southern-university,1380
 southern-utah,1381
 southwest missouri state,1283
 st bonaventure,1382
+st. francis ny,1383
 st francis (ny),1383
+st. francis pa,1384
 st francis (pa),1384
 st francis ny,1383
 st francis pa,1384
@@ -939,7 +950,7 @@ sw missouri st.,1283
 syracuse,1393
 tam c,1394
 tam c. christi,1394
-tarleton st,1470
+tarleton st.,1470
 tcu,1395
 temple,1396
 tenn-martin,1404
@@ -949,6 +960,7 @@ tennessee st.,1398
 tennessee state,1398
 tennessee tech,1399
 tennessee-chattanooga,1151
+tennessee martin,1404
 tennessee-martin,1404
 tennessee-st,1398
 tennessee-state,1398
@@ -957,11 +969,13 @@ tex.-pan american,1410
 texas,1400
 texas a&m,1401
 texas a&m cc,1394
+texas a&m corpus chris,1394
 texas a&m corpus,1394
 texas a&m-cc,1394
 texas a&m-corpus christi,1394
 texas arlington,1426
 texas christian,1395
+ut rio grande valley,1410
 texas rio grande valley,1410
 texas san antonio,1427
 texas southern,1411
