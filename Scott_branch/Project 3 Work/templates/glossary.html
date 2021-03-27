@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" id="not-homepage">
+
+<head>
+    <meta charset="utf-8">
+    <title>March Madness</title>
+    <!--------------------------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/slate/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <!--------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/jeezy@1.13.1/lib/jeezy.min.js"></script>
+
+</head>
+
+<body id="not-homepage">
+    <nav class=" navbar navbar-expand-lg navbar-dark bg-dark ">
+        <a class="navbar-brand " href="index.html ">
+            <img src="static\images\1200px-March_Madness_logo.svg.png " alt="logo " style="width:115px;height:65px; ">
+        </a>
+        <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarColor02 " aria-controls="navbarColor02 " aria-expanded="false " aria-label="Toggle navigation ">
+        <span class="navbar-toggler-icon "></span>
+        </button>
+        <!--NAVBAR-->
+        <div class="collapse navbar-collapse">
+            <ul class=" navbar-nav ml-auto ">
+                <li class="nav-item active ">
+                    <a class="nav-link " href="index.html ">Home</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link " href="mLearning.html ">ML</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link " href="tabDash.html ">Tableau</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link " href="madnessData.html ">Data</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link " href="glossary.html ">Glossary</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link " href="about.html ">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12" style=top:100px;>
+                <h1>Glossary - March Madness</h1>
+                <hr>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Term</th>
+                            <th>Definition</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="other-row">
+                            <td>AdjEM:</td>
+                            <td>Adjusted Efficiency Margin – NET of Adjusted Offensive Efficiency and Adjusted Defensive Efficiency.</td>
+                        </tr>
+                        <tr class="active-row">
+                            <td>AdjO:</td>
+                            <td>Adjusted Offensive Efficiency – An estimated of the offensive efficiency (points scored per 100 possessions) a team would have against the average D-I defense.</td>
+                        </tr>
+                        <tr class="other-row">
+                            <td>AdjD:</td>
+                            <td>Adjusted Defensive Efficiency – An estimate of the defensive efficiency (points allowed per 100 possessions) a team would have against the average D-I offense</td>
+                        </tr>
+                        <tr class="active-row">
+                            <td>AdjT:</td>
+                            <td>Adjusted Tempo – An estimate of the tempo (possessions per 40-minutes) a team would have against the team that wants to play at an average D-I Tempo.</td>
+                        </tr>
+                        <tr class="other-row">
+                            <td>Luck:</td>
+                            <td>Luck Rating – a measure of the deviation between a team’s actual winning percentage and what one would expect from its game-by-game efficiencies. Essentially, a team involved in a lot of close games should not win (or lose)
+                                all of them. Those are viewed as lucky (or unlucky)</td>
+                        </tr>
+                        <tr class="active-row">
+                            <td>SOS:</td>
+                            <td>Strength of schedule – The components here are similar to the team components. Because we’re measuring a team’s offensive and defensive ability, we can also assess its schedule in similar terms. Did teams play mostly good or
+                                mostly bad teams?</td>
+                        </tr>
+                        <tr class="other-row">
+                            <td>TeamID:</td>
+                            <td>Unique identifier for each Division I NCAA basketball team.</td>
+                        </tr>
+                        <tr class="active-row">
+                            <td>FGM:</td>
+                            <td>Total number of 2-point field goals made by a team.</td>
+                        </tr>
+                        <tr class="other-row">
+                            <td>FGA:</td>
+                            <td>Total number of 2-point field goals attempted by a team.</td>
+                        </tr>
+                        <tr class="active-row">
+                            <td>FGM3:</td>
+                            <td>Total number of 3-point field goals made by a team.</td>
+                        </tr>
+                        <tr class="other-row">
+                            <td>FGA3:</td>
+                            <td>Total number of 3-point field goals attempted by a team.</td>
+                        </tr>
+                        <tr class="active-row">
+                            <td>FTM:</td>
+                            <td>Total number of Free Throws (1-point) made by a team</td>
+                        </tr>
+                        <tr class="other-row">
+                            <td>FTA:</td>
+                            <td>Total number of Free Throws (1-point) attempted by a team.</td>
+                        </tr>
+                        <tr class="active-row">
+                            <td>OR:</td>
+                            <td>Total number of Offensive Rebounds.</td>
+                        </tr>
+                        <tr class="other-row">
+                            <td>DR:</td>
+                            <td>Total number of Defensive Rebounds.</td>
+                        </tr>
+                        <tr class="active-row">
+                            <td>AST:</td>
+                            <td>Total number of baskets assisted per team.</td>
+                        </tr>
+                        <tr class="other-row">
+                            <td>TO:</td>
+                            <td>Total number of times a team lost possession by turnovers.</td>
+                        </tr>
+                        <tr class="active-row">
+                            <td>STL:</td>
+                            <td>Total number of Steals by a team.</td>
+                        </tr>
+                        <tr class="other-row">
+                            <td>BLK:</td>
+                            <td>Total number of Blocks by a team.</td>
+                        </tr>
+                        <tr class="active-row">
+                            <td>PF:</td>
+                            <td>Total number of player fouls by a team.</td>
+                        </tr>
+
+                        <!-- and so on... -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

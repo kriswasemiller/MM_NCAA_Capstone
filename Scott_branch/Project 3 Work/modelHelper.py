@@ -3,48 +3,39 @@ import datetime
 import time
 import pickle
 import numpy as np
-
+import random
 class ModelHelper():
     def __init__(self):
         pass
-
-    def makePredictions(self, sex_flag, age, fare, familySize, pclass, embarked):
-        pclass_1 = 0
-        pclass_2 = 0
-        pclass_3 = 0
-
-        embarked_c = 0
-        embarked_q = 0
-        embarked_s = 0
-
-        # parse pclass
-        if (pclass == 1):
-            pclass_1 = 1
-        elif (pclass == 2):
-            pclass_2 = 1
-        elif (pclass == 3):
-            pclass_3 = 1
+    def get_matchup(self, yr1, yr2, avg_df_year, teamA, gb_year, avg_df_year2, teamB, gb_year2):
+        home = avg_df_year.loc[avg_df_year['TeamName_Clean'] == teamA]
+        home = home[['AdjEM', 'AdjO', 'AdjD', 'AdjT', 'Luck', 'SOS_AdjEM',
+        'SOS_OppO', 'SOS_OppD', 'NCSOS_AdjEM', 'WFGA',
+        'WFGA3', 'WFTA', 'WOR', 'WDR', 'WAst', 'WTO', 'WStl', 'WBlk',
+        'WPF']]
+        away = avg_df_year2.loc[avg_df_year2['TeamName_Clean'] == teamB]
+        away = away[['AdjEM', 'AdjO', 'AdjD', 'AdjT', 'Luck', 'SOS_AdjEM',
+        'SOS_OppO', 'SOS_OppD', 'NCSOS_AdjEM', 'WFGA',
+        'WFGA3', 'WFTA', 'WOR', 'WDR', 'WAst', 'WTO', 'WStl', 'WBlk',
+        'WPF']]
+        home_points = pd.merge(home, away, how='outer')
+        away_points = pd.merge(away, home, how='outer')
+        home_points = np.array(home_points).reshape(-1, 38)
+        away_points = np.array(away_points).reshape(-1, 38)
+        home_score = int(gb_year.predict(home_points))
+        away_score = int(gb_year2.predict(away_points))
+        OT_count = 0
+        while home_score == away_score:
+            OT_count += 1
+            print(f'END OF REGULATION | {teamA}: {round(home_score,0)} | {teamB}: {round(away_score,0)}')
+            print('-----------------------------------------')
+            print(f'SIMMING {OT_count}OT')
+            print('-----------------------------------------')
+            home_score = home_score + random.randint(5, 15)
+            away_score = away_score + random.randint(5, 15)
         else:
-            pass
-
-        # parse embarked
-        if (embarked == "C"):
-            embarked_c = 1
-        elif (embarked == "Q"):
-            embarked_q = 1
-        elif (embarked == "S"):
-            embarked_s = 1
-        else:
-            pass
-
-        input_pred = [[sex_flag, age, fare, familySize, pclass_1, pclass_2, pclass_3, embarked_c, embarked_q, embarked_s]]
-
-
-        filename = 'finalized_model.sav'
-        ada_load = pickle.load(open(filename, 'rb'))
-
-        X = np.array(input_pred)
-        preds = ada_load.predict_proba(X)
-        preds_singular = ada_load.predict(X)
-
-        return preds_singular[0]
+            print('FINAL')
+            print('-----------------------------------------')
+            # return (f'{yr1} {teamA}: {round(home_score,0)} | {yr2} {teamB}: {round(away_score,0)}')
+            return [{'team': teamA, 'points': home_score}, {'team': teamB, 'points': away_score}]
+            

@@ -151,7 +151,7 @@
     .styled-table {
         border-collapse: collapse;
         margin: 25px 0;
-        font-size: auto;
+        font-size: 20px;
         font-family: sans-serif;
         min-width: 100%;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -183,4 +183,9 @@
     .styled-table tbody tr.active-row {
         font-weight: bold;
         color: #000000;
+    }
+    
+    .styled-table tbody tr.other-row {
+        font-weight: bold;
+        color: #aaaaaa;
     }

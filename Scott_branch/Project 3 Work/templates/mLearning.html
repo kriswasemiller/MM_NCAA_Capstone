@@ -8,13 +8,14 @@
     <!--------------------------->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/slate/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
     <!--------------------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/jeezy@1.13.1/lib/jeezy.min.js"></script>
+    <script type="text/javascript" src="static/js/logic.js"></script>
+
 
 </head>
 
@@ -57,7 +58,29 @@
             <div class="col-md-12" style="top:100px;">
                 <h1>March Madness - Machine Learning</h1>
                 <hr>
-
+                <div class="container">
+                    <div class="card border-primary mb-3" style="max-width: 20rem;">
+                        <div class="card-header">Filters</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="col-form-label" for="team">Team</label>
+                                        <select id="team">
+                                            <option value="oral roberts">Oral Roberts</option>
+                                            <option value="ohio st.">Ohio State</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button type="button" class="btn btn-primary" id="filter">Make Prediction!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 </body>
 
 </html>
