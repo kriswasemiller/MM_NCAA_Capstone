@@ -109,6 +109,31 @@ section::after {
     text-transform: initial;
 }
 
+.container .card .sci {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    display: flex;
+}
+
+.container .card .sci li {
+    list-style: none;
+    margin: 0 10px;
+    transform: translateY(30px) scaleX(-1);
+    transition: 1.0s;
+}
+
+.container .card:hover .sci li {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.container .card .sci li a {
+    color: white;
+    font-size: 36px;
+    ;
+}
+
 .navbar {
     position: fixed;
     width: 100%;

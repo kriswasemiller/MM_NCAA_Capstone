@@ -12,12 +12,14 @@
     <!--------------------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/jeezy@1.13.1/lib/jeezy.min.js"></script>
+    <script type="text/javascript" src=static\js\dataTable.js></script>
+
 
 </head>
 
 <body id="not-homepage">
     <nav class=" navbar navbar-expand-lg navbar-dark bg-dark ">
-        <a class="navbar-brand " href="index.html ">
+        <a class="navbar-brand " href="/">
             <img src="static\images\1200px-March_Madness_logo.svg.png " alt="logo " style="width:115px;height:65px; ">
         </a>
         <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarColor02 " aria-controls="navbarColor02 " aria-expanded="false " aria-label="Toggle navigation ">
@@ -25,35 +27,56 @@
         </button>
 
         <!--NAVBAR-->
-        <div class="collapse navbar-collapse " id="navbarColor01 ">
-            <ul class="navbar-nav ml-auto ">
+        <div class="collapse navbar-collapse ">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item active ">
-                    <a class="nav-link " href="index.html ">Home</a>
+                    <a class="nav-link " href="/">Home</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link " href="mLearning.html ">ML</a>
+                    <a class="nav-link " href="/prediction">ML</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link " href="tabDash.html ">Tableau</a>
+                    <a class="nav-link " href="/tableau">Tableau</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link " href="madnessData.html">Data</a>
+                    <a class="nav-link " href="/data">Data</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link " href="glossary.html ">Glossary</a>
+                    <a class="nav-link " href="/glossary">Glossary</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link " href="about.html ">About</a>
+                    <a class="nav-link " href="/about">About</a>
                 </li>
             </ul>
         </div>
     </nav>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12" style="top:100px;">
-                <h1>DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA
-                    TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES, DATA TABLES</h1>
+                <h1>March Madness - Data Tables</h1>
                 <hr>
+                <span class="content_item non_wrapping">
+                    <span class="page_heading">
+                        <span>Drill down, and dig deep, with a table</span>
+                </span>
+                </span>
+                <div id="DirectEditPreserve" class="wow fadeInUp databaseTable_holder 122860">
+                    <div id="DirectEditPreserve" class="databaseTable_heading">
+                        <div id="DirectEditPreserve" class="databaseTable_title">Test Table</div>
+                        <input id="DirectEditPreserve" class="databaseTable_search" type="text" width="200" placeholder="Search this table">
+                    </div>
+                    <div id="DirectEditPreserve" class="databaseTable">
+                        <div id="DirectEditPreserve" class="databaseTable_import_wrap" style="display: block;">
+                        </div>
+                        <div id="DirectEditPreserve" class="databaseTable_UI_scrollLeft databaseTable_UI_button" style="display: none;">
+                            <!-- JS shows/hides by appending the .hidden class -->
+                        </div>
+                        <div id="DirectEditPreserve" class="databaseTable_UI_scrollRight databaseTable_UI_button" style="display: none;">
+                            <!-- JS shows/hides by appending the .hidden class -->
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
