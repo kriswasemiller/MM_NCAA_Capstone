@@ -56,47 +56,20 @@ def tableau():
 
 @app.route("/makePredictions", methods=["POST"])
 def makePredictions():
+    content=request.json["data"]
+    yr1 = int(content["year1"])
+    yr2 = int(content["year2"])
+
+    avg_df_year = pd.read_csv(f'static/data/full_avg_{yr1}.csv')
+    gb_year = pickle.load(open(f'static/models/finalized_model_{yr1}.sav', 'rb'))
+    avg_df_year2 = pd.read_csv(f'static/data/full_avg_{yr2}.csv')
+    gb_year2 = pickle.load(open(f'static/models/finalized_model_{yr2}.sav', 'rb'))
     
-    yr1 = 2019
-    yr2 = 2018
-    if (yr1 == 2021):
-        avg_df_year = pd.read_csv('static/data/full_avg_2021.csv')
-        gb_year = pickle.load(open('static/models/finalized_model_2021.sav', 'rb'))
-    elif (yr1 == 2020):
-        avg_df_year = pd.read_csv('static/data/full_avg_2020.csv')
-        gb_year = pickle.load(open('static/models/finalized_model_2020.sav', 'rb'))
-    elif (yr1 == 2019):
-        avg_df_year = pd.read_csv('static/data/full_avg_2019.csv')
-        gb_year = pickle.load(open('static/models/finalized_model_2019.sav', 'rb'))
-    elif (yr1 == 2018):
-        avg_df_year = pd.read_csv('static/data/full_avg_2018.csv')
-        gb_year = pickle.load(open('static/models/finalized_model_2018.sav', 'rb'))
-    elif (yr1 ==2017):
-        avg_df_year = pd.read_csv('static/data/full_avg_2017.csv')
-        gb_year = pickle.load(open('static/models/finalized_model_2017.sav', 'rb'))
-    else:
-        avg_df_year = pd.read_csv('static/data/full_avg_2016.csv')
-        gb_year = pickle.load(open('static/models/finalized_model_2016.sav', 'rb'))
-    teamA = 'ohio st.'
-    if (yr2 == 2021):
-        avg_df_year2 = pd.read_csv('static/data/full_avg_2021.csv')
-        gb_year2 = pickle.load(open('static/models/finalized_model_2021.sav', 'rb'))
-    elif (yr2 == 2020):
-        avg_df_year2 = pd.read_csv('static/data/full_avg_2020.csv')
-        gb_year2 = pickle.load(open('static/models/finalized_model_2020.sav', 'rb'))
-    elif (yr2 == 2019):
-        avg_df_year2 = pd.read_csv('static/data/full_avg_2019.csv')
-        gb_year2 = pickle.load(open('static/models/finalized_model_2019.sav', 'rb'))
-    elif (yr2 == 2018):
-        avg_df_year2 = pd.read_csv('static/data/full_avg_2018.csv')
-        gb_year2 = pickle.load(open('static/models/finalized_model_2018.sav', 'rb'))
-    elif (yr2 ==2017):
-        avg_df_year2 = pd.read_csv('static/data/full_avg_2017.csv')
-        gb_year2 = pickle.load(open('static/models/finalized_model_2017.sav', 'rb'))
-    else:
-        avg_df_year2 = pd.read_csv('static/data/full_avg_2016.csv')
-        gb_year2 = pickle.load(open('static/models/finalized_model_2016.sav', 'rb'))
-    teamB = 'oral roberts'
+
+    teamA = str(content["team1"])
+    teamB = str(content["team2"])
+
+    
     prediction = modelHelper.get_matchup(yr1, yr2, avg_df_year, teamA, gb_year, avg_df_year2, teamB, gb_year2)
     print(prediction)
     return(jsonify({"ok": True, "prediction": prediction}))

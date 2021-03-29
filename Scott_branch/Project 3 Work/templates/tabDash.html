@@ -54,7 +54,14 @@
             <div class="col-md-12" style="top:100px;">
                 <h1>March Madness - Tableau Dashboard
                     <hr>
-
+                    <p id="tabP">The main Tableau visualization is the Stats Dashboard. This visualization allows the user to manipulate season range, type of game, statistic viewed, the value of the statistic whether it be total or average, and the amount of top
+                        chosen values to view. From there the bar chart and line chart differ slightly. The bar chart has two additional drop downs to use: XAxisSelector and Tooltip Legend Information. The XAxisSelector allows the user to choose what
+                        value they want to see on the X Axis, whether it be teams, coaches, or conferences. The Tooltip Legend Information drop down allows the user to choose what they will see in the tooltip as well as what coloring will be viewed in
+                        the visualization itself. An example could be the user selects teams as their x axis, and coaches as their tooltip legend information allowing them to see the teams as the main point of interest, but then broken out into sections
+                        of color identifying the coaches that contributed to that team. Additionally, if the user hovered over a specific coach segment of a team’s bar, the tooltip that pops up will display the coach’s contribution over time for the chosen
+                        stat viewed.
+                        <hr> The line chart has one additional drop down to use, the YAxisSelector. Similar to the XAxisSelector from the bar chart visualization, the YAxisSelector lets the user select which value they want to see on the y axis, whether it
+                        be teams, coaches, or conferences.</p>
                     <div class='tableauPlaceholder' id='viz1616858667782' style='position: relative'><noscript><a href='#'><img alt='Stats_Dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;March_Madness_16162656663920&#47;Stats_Dashboard&#47;1_rss.png' style='border: none' /></a></noscript>
                         <object class='tableauViz' style='display:none;'>
                                 <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
@@ -90,10 +97,48 @@
                         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
                         vizElement.parentNode.insertBefore(scriptElement, vizElement);
                     </script>
+                    <hr>
+                    <hr>
+                    <p>The second tableau visualization is the Race Dashboard. This visualization simultaneously shows the top ranked teams, coaches, and conferences with the most cumulative wins over time. The user would click the play button and watch
+                        the rankings change as the cumulative wins increase over time.</p>
+                    <hr>
+                    <div class='tableauPlaceholder' id='viz1616976612019' style='position: relative'><noscript><a href='#'><img alt='Race_Dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;March_Madness_16162656663920&#47;Race_Dashboard&#47;1_rss.png' style='border: none' /></a></noscript>
+                        <object class='tableauViz' style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='site_root' value='' />
+                            <param name='name' value='March_Madness_16162656663920&#47;Race_Dashboard' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ma&#47;March_Madness_16162656663920&#47;Race_Dashboard&#47;1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='en' />
+                            </object>
+                    </div>
+                    <script type='text/javascript'>
+                        var divElement = document.getElementById('viz1616976612019');
+                        var vizElement = divElement.getElementsByTagName('object')[0];
+                        if (divElement.offsetWidth > 800) {
+                            vizElement.style.width = '100%';
+                            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                        } else if (divElement.offsetWidth > 500) {
+                            vizElement.style.width = '100%';
+                            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                        } else {
+                            vizElement.style.width = '100%';
+                            vizElement.style.height = '1027px';
+                        }
+                        var scriptElement = document.createElement('script');
+                        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                    </script>
             </div>
         </div>
     </div>
-
 </body>
 
 </html>

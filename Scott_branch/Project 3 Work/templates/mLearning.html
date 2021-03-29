@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="not-homepage">
+<html lang="en" id="not-homepage-ml">
 
 <head>
     <meta charset="utf-8">
@@ -11,15 +11,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/slate/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
     <!--------------------------->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/jeezy@1.13.1/lib/jeezy.min.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
     <script type="text/javascript" src="static/js/logic.js"></script>
+
 
 
 </head>
 
-<body id="not-homepage">
+<body id="not-homepage-ml">
     <nav class=" navbar navbar-expand-lg navbar-dark bg-dark ">
         <a class="navbar-brand " href="/">
             <img src="static\images\1200px-March_Madness_logo.svg.png" alt="logo " style="width:115px;height:65px; ">
@@ -58,24 +61,68 @@
             <div class="col-md-12" style="top:100px;">
                 <h1>March Madness - Machine Learning</h1>
                 <hr>
-                <div class="container">
-                    <div class="card border-primary mb-3" style="max-width: 20rem;">
-                        <div class="card-header">Filters</div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
+                <h1 style="text-align: center;">Pick two separate team names below to see a predicted score!</h1>
+
+                <div class="container divElement">
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <div class="card">
+                                <img class="card-img-top" src="" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Team 1</h5>
                                     <div class="form-group">
-                                        <label class="col-form-label" for="team">Team</label>
-                                        <select id="team">
-                                            <option value="oral roberts">Oral Roberts</option>
-                                            <option value="ohio st.">Ohio State</option>
-                                        </select>
+                                        <label class="col-form-label" for="team">Pick a team!</label>
+                                        <select id="team1"></select>
+                                        <label class="col-form-label">Pick a year!</label>
+                                        <select id="year1">
+                                            <option value="2021">2021</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2016">2016</option>
+                                    </select>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="card">
+                                <img class="card-img-top" src="" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Team 2</h5>
+                                    <div class="form-group">
+                                        <label class="col-form-label" for="team">Pick a team!</label>
+                                        <select id="team2"></select>
+                                        <label class="col-form-label">Pick a year!</label>
+                                        <select id="year2">
+                                            <option value="2021">2021</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2016">2016</option>
+                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container divElement">
+                    <div class="card border-primary mb-3" style="max-width: 100rem;">
+                        <div class="card-header">
                             <div class="row">
                                 <div class="col-md-12">
                                     <button type="button" class="btn btn-primary" id="filter">Make Prediction!</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12" id="upperC">
+                                    <h1 style="text-align:center; color: white"><span id="output2"></span> - <span id="output"></span></h1>
+                                    <h1 style="text-align:center; color: white"><span id="output3"></span> - <span id="output1"></span></h1>
                                 </div>
                             </div>
                         </div>

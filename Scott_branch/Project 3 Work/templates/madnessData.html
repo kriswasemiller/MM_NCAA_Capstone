@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/slate/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="static/css/data.css">
     <!--------------------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/jeezy@1.13.1/lib/jeezy.min.js"></script>
+    <script type="text/javascript" src="static\js\data.js"></script>
+
 </head>
 
 <body id="not-homepage">
@@ -50,9 +52,34 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12" style="top:100px;">
-                <h1>March Madness - Data Tables</h1>
+            <div class="col-md-12" style="top:50px;">
+                <h1 style="color: white">March Madness - Data Table</h1>
                 <hr>
+
+                <span class="content_item non_wrapping">
+                    <span class="page_heading">
+                        <span></span>
+                </span>
+                </span>
+                <div id="DirectEditPreserve" class="wow fadeInUp databaseTable_holder 122860">
+                    <div id="DirectEditPreserve" class="databaseTable_heading">
+                        <div id="DirectEditPreserve" class="databaseTable_title">
+                            <h2>2016-2021 Data Table</h2>
+                        </div>
+                        <input id="DirectEditPreserve" class="databaseTable_search" type="text" width="200" placeholder="Search this table">
+                    </div>
+                    <div id="DirectEditPreserve" class="databaseTable">
+                        <div id="DirectEditPreserve" class="databaseTable_import_wrap" style="display: block;">
+                        </div>
+                        <div id="DirectEditPreserve" class="databaseTable_UI_scrollLeft databaseTable_UI_button" style="display: none;">
+                            <!-- JS shows/hides by appending the .hidden class -->
+                        </div>
+                        <div id="DirectEditPreserve" class="databaseTable_UI_scrollRight databaseTable_UI_button" style="display: none;">
+                            <!-- JS shows/hides by appending the .hidden class -->
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

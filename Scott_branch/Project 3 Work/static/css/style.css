@@ -3,6 +3,7 @@
         width: 100%;
         top: 0;
         left: 0;
+        z-index: 10;
     }
     
     * {
@@ -189,4 +190,33 @@
         font-weight: bold;
         color: #aaaaaa;
     }
-    /*DATA PAGE*/
+    
+    #tabP {
+        z-index: 20;
+    }
+    
+    #upperC {
+        text-transform: uppercase;
+    }
+    /*ML PAGE*/
+    
+    #not-homepage-ml {
+        display: flex;
+        background: rgb(255, 255, 255);
+        width: 100%;
+        height: 100%;
+        background-image: url('https://i.pinimg.com/originals/ef/01/64/ef01641f0d3da9ab623104480b903806.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+    
+    #not-homepage-ml h1 {
+        color: rgb(255, 255, 255);
+    }
+    
+    .divElement {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
