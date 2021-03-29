@@ -191,8 +191,9 @@
         color: #aaaaaa;
     }
     
-    #tabP {
+    .tabP {
         z-index: 20;
+        color: black;
     }
     
     #upperC {
